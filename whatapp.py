@@ -23,6 +23,11 @@ def inter():
         exit()
 
 driver=webdriver.Chrome(executable_path=inter())
+# TODO: If not working 'body' and 'button' has to change
+# For 'body': select full xpath from input element
+# For 'button': select full xpath of send button. Note that enter a text in input element to make button visible.
+body='/html/body/div[1]/div/div/div[4]/div/footer/div[1]/div[2]/div/div[2]'
+button='/html/body/div[1]/div/div/div[4]/div/footer/div[1]/div[3]/button'
 
 def screenshort():
     #? It for screenshot
@@ -34,17 +39,14 @@ def screenshort():
 def textLoop():
     text=str(input("Enter The Text: "))
     n=int(input("Enter Number Of Time: "))
-    delay=int(input("Enter Delay(in seconds): "))
-    # TODO: If not working 'body' and 'button' has to change
-    # For 'body': select full xpath from input element
-    # For 'button': select full xpath of send button. Note that enter a text in input element to make button visible.
-    body='/html/body/div[1]/div/div/div[4]/div/footer/div[1]/div[2]/div/div[2]'
-    button='/html/body/div[1]/div/div/div[4]/div/footer/div[1]/div[3]/button'
+    delay=float(input("Enter Delay(in seconds): "))
     for _ in range(n):
         driver.find_element_by_xpath(body).send_keys(text)
         driver.find_element_by_xpath(button).click()
         sleep(delay)
 
+def langPlay():
+    pass
 
 def whatsapp():
     print("The browser is started.....")
@@ -68,7 +70,8 @@ def whatsapp():
         OPTIONS:
             1> Text Looping 
             2> Screenshort
-            3> Exit
+            3> Langauge Play
+            4> Exit
         ''')
         choice=int(input("\tEnter: "))
         if choice == 1:
@@ -76,6 +79,8 @@ def whatsapp():
         elif choice == 2:
             screenshort()
         elif choice == 3:
+            pass
+        elif choice == 4:
             driver.quit()
             exit()
         else:
