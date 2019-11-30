@@ -6,5 +6,27 @@
 >Have fun with the script.
 
 
+## Instruction
+
+>   Download the script from github, and run whatapp.py file.
+
+>   Scan the bar code with your whatsapp barcode scanner to link your account.
+
+>   Unless you do the step above script will not work.
+
+>   If did it than wait for few seconds as javascript is loading in the browser.
+
+>   Press Enter to continue.
+
+
+## Preview
+
+![preview 1](https://i.imgur.com/oGhAQgx.png)
+![preview 2](https://i.imgur.com/NmkYrBU.png)
+![preview 3](https://i.imgur.com/UeLPJNu.png)
+
+
+
+
 ***If Any Problem Ping Me***
 [Discord](https://discord.gg/PnVQtcu)
