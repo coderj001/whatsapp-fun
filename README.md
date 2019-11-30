@@ -8,7 +8,7 @@
 
 ## Instruction
 
->   Download the script from github, and run whatapp.py file.
+>   Download the script from github and install dependency by typing command "python install -r requirements.txt", then run the whatapp.py file.
 
 >   Scan the bar code with your whatsapp barcode scanner to link your account.
 
