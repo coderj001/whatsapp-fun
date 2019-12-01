@@ -6,6 +6,7 @@ This python file is to make whatsapp text.
 from selenium import webdriver
 from platform import system
 from time import sleep
+from googletrans import Translator
 import os
 
 def inter():
@@ -46,7 +47,26 @@ def textLoop():
         sleep(delay)
 
 def langPlay():
-    pass
+    #? Translate english ---> hindi, bengali, ...
+    # TODO: If more langauge collection is need please reffer https://meta.wikimedia.org/wiki/Template:List_of_language_names_ordered_by_code
+    #! Add short form on 'lang' and add option. After Nothing needs to change.
+    lang=['bn','hi','la','jv','ja']
+    print('''
+            Enter:
+                    1> Bengali
+                    2> Hindi
+                    3> Latin
+                    4> Javanese
+                    5> Japanese
+    ''')
+    n=int(input("Enter: "))-1
+    t=Translator()
+    while(True):
+        tr=t.translate(str(input("Enter Text: ")), dest=lang[n])
+        driver.find_element_by_xpath(body).send_keys(tr.text)
+        driver.find_element_by_xpath(button).click()
+        if input("Enter 1 to exit: ") is '1':
+            break
 
 def whatsapp():
     print("The browser is started.....")
@@ -79,7 +99,7 @@ def whatsapp():
         elif choice == 2:
             screenshort()
         elif choice == 3:
-            pass
+            langPlay()
         elif choice == 4:
             driver.quit()
             exit()
