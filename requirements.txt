@@ -22,7 +22,7 @@ public==2019.4.13
 Pygments==2.5.2
 pylint==2.4.4
 query-string==2019.4.13
-requests==2.22.0
+requests==2.31.0
 selenium==3.141.0
 six==1.13.0
 traitlets==4.3.3
